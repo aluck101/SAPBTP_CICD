@@ -7,6 +7,7 @@ pipeline {
     IntegrationPackage = "TALU" //relevant for flows that are uploaded the first time 
     DeployFlow = true //if the flow should only be uploaded, set this to false
     DeploymentCheckRetryCounter = 20 //multiply by 3 to get the maximum deployment time
+    CPIHost = "${env.CPI_HOST}"
 	CPIOAuthHost = "${env.CPI_OAUTH_HOST}"
 	CPIOAuthCredentials = "${env.CPI_OAUTH_CRED}"	
 	GITRepositoryURL  =  "github.com/aluck101/SAPBTP_CICD.git"
