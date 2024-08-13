@@ -168,7 +168,7 @@ pipeline {
                 statusResp.close();
                 continueLoop = false
               } else {
-                println("The integration flow is not yet started. Will wait 3s and then check again.")
+                println("The integration flow is not yet started. Will wait 10s and then check again.")
               }
             }
             if (!deploymentStatus.equalsIgnoreCase("Started")) {
