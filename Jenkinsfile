@@ -9,10 +9,9 @@ pipeline {
     DeploymentCheckRetryCounter = 20 //multiply by 3 to get the maximum deployment time
 	CPIOAuthHost = "${env.CPI_OAUTH_HOST}"
 	CPIOAuthCredentials = "${env.CPI_OAUTH_CRED}"	
-	GITRepositoryURL  =  "${env.GITRepositoryURL}"
+	GITRepositoryURL  =  "github.com/aluck101/SAPBTP_CICD.git"
 	GITCredentials = "${env.GITCredentials}"
-	GITToken = "${env.GITToken}"
-	GITBranch = "${env.GITBranch}"
+	GITBranch = "origin/master"
     GITFolder = "${env.GITFolder}"
   }
 
