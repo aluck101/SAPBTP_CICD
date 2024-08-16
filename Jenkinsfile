@@ -3,7 +3,7 @@ pipeline {
 
   //Configure the following environment variables before executing the Jenkins Job
   environment {
-    IntegrationFlowID = "UploadFromGit"
+    IntegrationFlowID = "FlowWithParams"
     IntegrationPackage = "TALU" //relevant for flows that are uploaded the first time 
     DeployFlow = true //if the flow should only be uploaded, set this to false
     DeploymentCheckRetryCounter = 20 //multiply by 3 to get the maximum deployment time
@@ -26,7 +26,7 @@ pipeline {
 		      //checkout the folder from Git
           checkout([
             $class: 'GitSCM',
-            branches: [[name: env.GITBranch]],
+            branches: [[name: GITBranch]],
             doGenerateSubmoduleConfigurations: false,
             extensions: [
               [$class: 'RelativeTargetDirectory', relativeTargetDir: "."],
