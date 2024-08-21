@@ -3,14 +3,14 @@ pipeline {
 
   //Configure the following environment variables before executing the Jenkins Job
   environment {
-    IntegrationFlowID = "CICDTest"
+    IntegrationFlowID = "IntegrationCICDTest"
     IntegrationPackage = "TALU" //relevant for flows that are uploaded the first time 
     DeployFlow = true //if the flow should only be uploaded, set this to false
     DeploymentCheckRetryCounter = 20 //multiply by 3 to get the maximum deployment time
     CPIHost = "${env.CPI_HOST}"
 	  CPIOAuthHost = "${env.CPI_OAUTH_HOST}"
 	  CPIOAuthCredentials = "${env.CPI_OAUTH_CRED}"	
-	  GITRepositoryURL  =  "${env.GITRepositoryURL}"
+	  GITRepositoryURL  =  "https://github.com/aluck101/SAPBTP_CICD.git"
 	  GITCredentials = "${env.GITCredentials}"
 	  GITBranch = "${env.GITBranch}"
     GITFolder = "${env.GITFolder}"
