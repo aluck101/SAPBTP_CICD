@@ -8,11 +8,11 @@ pipeline {
     DeployFlow = true //if the flow should only be uploaded, set this to false
     DeploymentCheckRetryCounter = 20 //multiply by 3 to get the maximum deployment time
     CPIHost = "${env.CPI_HOST}"
-	CPIOAuthHost = "${env.CPI_OAUTH_HOST}"
-	CPIOAuthCredentials = "${env.CPI_OAUTH_CRED}"	
-	GITRepositoryURL  =  "${env.GITRepositoryURL}"
-	GITCredentials = "${env.GITCredentials}"
-	GITBranch = "origin/master"
+	  CPIOAuthHost = "${env.CPI_OAUTH_HOST}"
+	  CPIOAuthCredentials = "${env.CPI_OAUTH_CRED}"	
+	  GITRepositoryURL  =  "${env.GITRepositoryURL}"
+	  GITCredentials = "${env.GITCredentials}"
+	  GITBranch = "${env.GITBranch}"
     GITFolder = "${env.GITFolder}"
   }
 
@@ -79,9 +79,9 @@ pipeline {
             //prepare upload payload
             def postPayload = '{ \"Name\": \"flowName\", \"Id": "flowId\", \"PackageId\": \"packageId\", \"ArtifactContent\":\"flowContent\"}';
 
-            postPayload = postPayload.replace('flowName', env.IntegrationFlowID);
-            postPayload = postPayload.replace('flowId', env.IntegrationFlowID);
-            postPayload = postPayload.replace('packageId', env.IntegrationPackage);
+            postPayload = postPayload.replace('flowName', IntegrationFlowID);
+            postPayload = postPayload.replace('flowId', IntegrationFlowID);
+            postPayload = postPayload.replace('packageId', IntegrationPackage);
             postPayload = postPayload.replace('flowContent', filecontent);
 
             //upload
@@ -125,7 +125,7 @@ pipeline {
               ],
               ignoreSslErrors: true,
               timeout: 30,
-              url: 'https://' + env.CPIHost + '/api/v1/DeployIntegrationDesigntimeArtifact?Id=\'' + env.IntegrationFlowID + '\'&Version=\'active\'';
+              url: 'https://' + CPIHost + '/api/v1/DeployIntegrationDesigntimeArtifact?Id=\'' + IntegrationFlowID + '\'&Version=\'active\'';
 
             Integer counter = 0;
             def deploymentStatus;
@@ -142,7 +142,7 @@ pipeline {
                 httpMode: 'GET',
                 responseHandle: 'LEAVE_OPEN',
                 timeout: 30,
-                url: 'https://' + env.CPIHost + '/api/v1/IntegrationRuntimeArtifacts(\'' + env.IntegrationFlowID + '\')';
+                url: 'https://' + CPIHost + '/api/v1/IntegrationRuntimeArtifacts(\'' + IntegrationFlowID + '\')';
               def jsonObj = readJSON text: statusResp.content;
               deploymentStatus = jsonObj.d.Status;
 
@@ -156,7 +156,7 @@ pipeline {
                   httpMode: 'GET',
                   responseHandle: 'LEAVE_OPEN',
                   timeout: 30,
-                  url: 'https://' + env.CPIHost + '/api/v1/IntegrationRuntimeArtifacts(\'' + env.IntegrationFlowID + '\')' + '/ErrorInformation/$value';
+                  url: 'https://' + CPIHost + '/api/v1/IntegrationRuntimeArtifacts(\'' + IntegrationFlowID + '\')' + '/ErrorInformation/$value';
                 def jsonErrObj = readJSON text: deploymentErrorResp.content
                 def deployErrorInfo = jsonErrObj.parameter;
                 println("Error Details: " + deployErrorInfo);
