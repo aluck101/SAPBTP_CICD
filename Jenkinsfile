@@ -10,7 +10,7 @@ pipeline {
     CPIHost = "${env.CPI_HOST}"
 	  CPIOAuthHost = "${env.CPI_OAUTH_HOST}"
 	  CPIOAuthCredentials = "${env.CPI_OAUTH_CRED}"	
-	  GITRepositoryURL  =  "https://github.com/aluck101/SAPBTP_CICD.git"
+	  GITRepositoryURL  =  "github.com/aluck101/SAPBTP_CICD.git"
 	  GITCredentials = "${env.GITCredentials}"
 	  GITBranch = "${env.GITBranch}"
     GITFolder = "${env.GITFolder}"
