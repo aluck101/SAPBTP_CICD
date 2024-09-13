@@ -1,0 +1,12 @@
+#
+#Fri Sep 13 10:19:14 UTC 2024
+SelectArtifactType=iflow
+GitHubPath=IntegrationContent/IntegrationArtefacts/IntegrationCICDTest/src/main/resources/scenarioflows/integrationflow/Integration CICD Test.iflw
+OAuthCredential=PIR_DEVOPS
+HostAddress=https\://ccci-integration-suite-fuom1yo5.it-cpi024.cfapps.eu10-002.hana.ondemand.com
+GithHubAccessToken=Github_Token
+IntegrationPackageId=TALU
+GitHubRepositoryName=SAPBTP_CICD
+IntegrationFlowId=IntegrationCICDTest
+IntegrationFlowName=IntegrationCICDTest
+GitHubOwnerName=aluck101
