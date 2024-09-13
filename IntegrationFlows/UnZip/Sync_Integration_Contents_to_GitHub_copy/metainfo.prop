@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Fri Sep 13 10:17:49 UTC 2024
+description=Sync all or specific integration contents (only packages, iflows, value mappings) from the SAP Cloud Integration tenant to your GitHub repository.
+source=SAP Cloud Integration tenant
+target=GitHub Repository
