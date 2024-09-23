@@ -1,0 +1,6 @@
+#Store metainfo properties
+#Mon Sep 23 10:08:58 UTC 2024
+description=Create batches for writing data to SAP Integrated Business Planning for Supply Chain. On batch level, several processing parameters are defined, such as destination, command, planning area, and planning area version.
+SAP-MarkedSAP2SAP=SAP_TO_SAP_INTEGRATION
+source=SAPCloudPlatformIntegrationSuite
+target=SAPIntegratedBusinessPlanningforSupplyChain
