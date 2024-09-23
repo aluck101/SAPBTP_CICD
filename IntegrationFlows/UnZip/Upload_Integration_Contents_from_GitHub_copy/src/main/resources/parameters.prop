@@ -1,0 +1,12 @@
+#
+#Mon Sep 23 10:09:45 UTC 2024
+SelectArtifactType=iflow
+GitHubPath=IntegrationFlows/Zip/FlowWithParams.zip
+OAuthCredential=Trial_TALU_Cred
+HostAddress=https\://d84a98d8trial.it-cpitrial05.cfapps.us10-001.hana.ondemand.com
+GithHubAccessToken=Github_Token
+IntegrationPackageId=TestPackage
+GitHubRepositoryName=SAPBTP_CICD
+IntegrationFlowId=FlowWithParams
+IntegrationFlowName=FlowWithParams
+GitHubOwnerName=aluck101
