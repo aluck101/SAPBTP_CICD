@@ -1,5 +1,0 @@
-#Store metainfo properties
-#Fri Sep 13 10:19:14 UTC 2024
-description=Download the latest version of either an integration flow artifact or resources of an integration flow artifact from GitHub repository and either update or create the artifacts on the SAP Cloud Integration tenant.
-source=GitHub Repository
-target=SAP Cloud Integration tenant
