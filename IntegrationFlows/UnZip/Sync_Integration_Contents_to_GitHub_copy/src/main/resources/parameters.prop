@@ -1,0 +1,19 @@
+#
+#Mon Sep 23 10:08:26 UTC 2024
+Scheduler=<row><cell>dateType</cell><cell></cell></row><row><cell>timeType</cell><cell></cell></row><row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>onWeekly</cell><cell></cell></row><row><cell>onMonthly</cell><cell></cell></row><row><cell>OnEveryMinute</cell><cell></cell></row><row><cell>fromInterval</cell><cell></cell></row><row><cell>toInterval</cell><cell></cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>triggerType</cell><cell>simple</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>fireNow\=true</cell></row>
+GithubCommitMsg=Test Package From CI
+HostAddress=https\://ccci-integration-suite-fuom1yo5.it-cpi024.cfapps.eu10-002.hana.ondemand.com
+IntegrationPackageId=TALU
+ValueMappingId's=
+GitHubRepositoryName=SAPBTP_CICD
+SendTeamsNotification=no
+SelectArtifactType=all
+OAuthCredential=PIR_DEVOPS
+WebhookAddress=
+GithHubAccessToken=Github_Token
+UploadFileType=unzip
+Top=
+Skip=
+Event=create
+IntegrationFlowId=
+GitHubOwnerName=aluck101
