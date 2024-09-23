@@ -229,7 +229,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>Triggered from Jenkins</value>
+                    <value>CI Test</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
