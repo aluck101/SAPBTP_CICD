@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="ROOT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="select_response">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="row">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="locid" type="xs:string"/>
+                    <xs:element name="prdid" type="xs:string"/>
+                    <xs:element name="ddlotsizeindicator" type="xs:int"/>
+                    <xs:element name="ddroundingvalue" type="xs:short"/>
+                    <xs:element name="frozenhorizon" type="xs:short"/>
+                    <xs:element name="invholdingcostpolicy" type="xs:short"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValueResultSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ValueResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Value" type="xs:string"/>
+              <xs:element name="Name" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
